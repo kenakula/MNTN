@@ -20,7 +20,14 @@ block nav
 
 block main
   main
-    .container
+    .promo
+      .promo__inner
+        p.title.title--yellow A Hiking guide
+        p.promo__title Be prepared for the Mountains and beyond!
+        button.promo__button.btn-reset
+          span Scroll down
+          +icon("icon-arrow-down", 16, 24)
+
 
 block modals
   +modal("modal--feedback")

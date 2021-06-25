@@ -1,0 +1,47 @@
+.promo {
+  padding-top: 100px;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 950px;
+
+    @include tablet {
+      padding: 0 24px;
+      max-width: none;
+    }
+  }
+
+  &__title {
+    @include font(88, 100);
+
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: $font-lato-regular;
+    text-transform: capitalize;
+
+    @include mobile {
+      @include font(65, 80);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    font-size: rem(18);
+    color: $color-white;
+
+    span {
+      margin-right: 10px;
+    }
+
+    svg {
+      transition: transform $default-transition-settings;
+    }
+
+    &:hover {
+      svg {
+        transform: translateY(5px);
+      }
+    }
+  }
+}
