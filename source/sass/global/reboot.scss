@@ -22,10 +22,10 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: $font-family--;
-  color: $color-default-black;
+  font-family: $font-gilroy-bold;
+  color: $color-white;
 
-  background-color: $color-default-white;
+  background-color: $color-black-pearl;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,6 +34,7 @@ body {
 a {
   color: $color-default-black;
   text-decoration: none;
+  font-family: $font-gilroy-bold;
 }
 
 img,

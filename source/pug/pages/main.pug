@@ -5,14 +5,15 @@ block data
 
 block variables
   -
-    const title = "ProjectName — Главная";
+    const title = "MNTN — Main";
     const hasHeader = true;
     const hasFooter = true;
     const currentPage = "main"; //- для остальных страниц пишем либо пустую строку, либо индекс
 
 block append head
   //- используйте только для шрифта находящегося на первом экране
-  link(rel="preload", href="fonts/placeholder.woff2", as="font", crossorigin="anonymous")
+  link(rel="preload", href="fonts/gilroy-bold.woff2", as="font", crossorigin="anonymous")
+  link(rel="preload", href="fonts/lato-regular.woff2", as="font", crossorigin="anonymous")
 
 block nav
   +main-nav(mainNav)
