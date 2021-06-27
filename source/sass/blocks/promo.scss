@@ -20,7 +20,7 @@
     text-transform: capitalize;
 
     @include mobile {
-      @include font(65, 80);
+      @include font(55, 75);
     }
   }
 

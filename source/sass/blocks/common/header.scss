@@ -31,4 +31,10 @@
   @include tablet {
     min-height: 100px;
   }
+
+  @include mobile {
+    &__wrapper {
+      position: initial;
+    }
+  }
 }

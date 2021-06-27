@@ -21,9 +21,18 @@
     }
 
     @include mobile {
-      top: 50px;
-      left: 35px;
+      top: 0px;
+      left: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
       min-width: auto;
+      background-color: $color-black-pearl;
+      transform: none;
+      z-index: 10;
     }
   }
 
@@ -37,6 +46,15 @@
 
     @include tablet {
       margin-right: 25px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -56,6 +74,10 @@
     @include tablet {
       font-size: rem(14);
     }
+
+    @include mobile {
+      font-size: rem(30);
+    }
   }
 
   &--expanded {
@@ -70,5 +92,9 @@
 
   @include tablet {
     order: -1;
+  }
+
+  @include mobile {
+    position: initial;
   }
 }
