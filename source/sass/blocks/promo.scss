@@ -3,7 +3,8 @@
 
   &__inner {
     margin: 0 auto;
-    max-width: 950px;
+    padding-left: 100px;
+    max-width: 1300px;
 
     @include tablet {
       padding: 0 24px;
@@ -29,6 +30,7 @@
     align-items: center;
     font-size: rem(18);
     color: $color-white;
+    transition: color $default-transition-settings;
 
     span {
       margin-right: 10px;
@@ -39,6 +41,8 @@
     }
 
     &:hover {
+      color: $color-golden-glow;
+
       svg {
         transform: translateY(5px);
       }
