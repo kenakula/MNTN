@@ -2,6 +2,7 @@ extends ../base/layout.pug
 
 block data
   include ../data/main-nav.data.pug
+  include ../data/stages.data.pug
 
 block variables
   -
@@ -21,12 +22,22 @@ block nav
 block main
   main
     .promo
-      .promo__inner
-        p.title.title--yellow A Hiking guide
-        p.promo__title Be prepared for the Mountains and beyond!
-        button.promo__button.btn-reset
-          span Scroll down
-          +icon("icon-arrow-down", 16, 24)
+      .promo__wrapper.container
+        +socials().promo__socials
+        .promo__inner
+          p.title.title--yellow A Hiking guide
+          p.promo__title Be prepared for the Mountains and beyond!
+          button.promo__button.btn-reset
+            span Scroll down
+            +icon("icon-arrow-down", 16, 24)
+
+    .stages
+      .stages__wrapper.container
+        ul.stages__list
+          each item in stagesList
+            +card(item).stages__item
+
+
 
 
 block modals

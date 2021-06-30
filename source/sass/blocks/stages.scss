@@ -1,0 +1,9 @@
+.stages {
+  &__wrapper {
+    max-width: 1462px;
+  }
+
+  &__list {
+    @include list-reset;
+  }
+}
