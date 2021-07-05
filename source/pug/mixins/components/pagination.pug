@@ -2,9 +2,11 @@
   const pagination = ['Start', '01', '02', '03'];
 
 mixin pagination
-  .overlay__pagination
-    .overlay__pages
+  .pagination&attributes(attributes)
+    .pagination__pages
       ul
         each item in pagination
           li
-            button(type="button", data-page=item) !{item}
+            button.pagination__button(type="button", data-page=item) !{item}
+    .pagination__track
+      .pagination__thumb

@@ -1,2 +1,43 @@
+-
+  const footerLists = [
+    {
+      title: 'More on The Blog',
+      links: [
+        'About MNTN',
+        'Contributors & Writers',
+        'Write For Us',
+        'Contact Us',
+        'Privacy Policy',
+      ],
+    },
+    {
+      title: 'More on MNTN',
+      links: [
+        'The Team',
+        'Jobs',
+        'Press',
+      ],
+    },
+  ];
+
 mixin footer(footerMod)
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
+    .footer__wrapper.container
+      .footer__info
+        if (currentPage === "main")
+          a.footer__logo
+            img(src="img/content/logo.svg", alt="site logo", width="108", height="24")
+        else
+          a.footer__logo(href="main.html", aria-label="Переход на главную")
+            img(src="img/content/logo.svg", alt="site logo", width="108", height="24")
+        .footer__text Get out there & discover your next slope, mountain & destination!
+        small.footer__copyrights Copyright 2019 MNTN, Inc. Terms & Privacy
+      .footer__map
+        each item in footerLists
+          .footer__col
+            h3.footer__col-title !{item.title}
+            ul.footer__list
+              each link in item.links
+                li
+                  a.footer__link(href="#") !{link}
+

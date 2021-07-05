@@ -25,6 +25,7 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 
 $font-gilroy-bold:                     "Gilroy Bold", "Arial", sans-serif;
 $font-gilroy-extrabold:                     "Gilroy Extraold", "Arial", sans-serif;
+$font-gilroy-medium:                    "Gilroy Medium", "Arial", sans-serif;
 $font-lato-regular:                     "Lato Regular", "Courier", sans-serif;
 $font-playfairdisplay-semibold:                     "Playfair Display Semibold", "Arial", sans-serif;
 $font-playfairdisplay-bold:                     "Playfair Display Bold", "Arial", sans-serif;
@@ -60,3 +61,11 @@ $padding-tablet:                    24px;
 $padding-mobile:                    15px;
 
 $padding-container:                 145px;
+
+// z-index
+
+$layer-1:                           10;
+$layer-2:                           20;
+$layer-3:                           30;
+$layer-4:                           40;
+$layer-5:                           50;

@@ -1,16 +1,24 @@
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   min-height: 150px;
+  z-index: $layer-5;
 
   &__wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 90%;
+
+    @include tablet {
+      max-width: none;
+    }
   }
 
   &__logo {
+    position: relative;
     color: $color-white;
     transition: opacity $default-transition-settings;
 
