@@ -1,0 +1,12 @@
+-
+  const pagination = ['Start', '01', '02', '03'];
+
+mixin pagination
+  .pagination&attributes(attributes)
+    .pagination__pages
+      ul
+        each item in pagination
+          li
+            button.pagination__button(type="button", data-page=item) !{item}
+    .pagination__track
+      .pagination__thumb

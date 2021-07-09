@@ -1,0 +1,59 @@
+.promo {
+  position: relative;
+  z-index: $layer-3;
+  margin-bottom: 820px;
+  padding-top: 170px;
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    padding-left: 100px;
+    max-width: 1300px;
+
+    @include tablet {
+      padding: 0;
+      // padding: 0 24px;
+      max-width: none;
+    }
+  }
+
+  &__title {
+    @include font(88, 100);
+
+    margin: 0;
+    margin-bottom: 25px;
+    font-family: $font-lato-regular;
+    text-transform: capitalize;
+
+    @include mobile {
+      @include font(55, 75);
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    font-size: rem(18);
+    color: $color-white;
+    transition: color $default-transition-settings;
+
+    span {
+      margin-right: 10px;
+    }
+
+    svg {
+      transition: transform $default-transition-settings;
+    }
+
+    &:hover {
+      color: $color-golden-glow;
+
+      svg {
+        transform: translateY(5px);
+      }
+    }
+  }
+}

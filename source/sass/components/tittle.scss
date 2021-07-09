@@ -1,0 +1,29 @@
+.title {
+  margin: 0;
+
+  &--yellow {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 102px;
+    font-family: $font-gilroy-extrabold;
+    font-size: rem(18);
+    text-transform: uppercase;
+    color: $color-golden-glow;
+    letter-spacing: 6px;
+
+    &::before {
+      @include pseudo;
+
+      top: 50%;
+      left: 0;
+      width: 72px;
+      height: 2px;
+      background-color: $color-golden-glow;
+      transform: translateY(-50%);
+    }
+
+    @include mobile {
+      @include font(16, 24);
+    }
+  }
+}

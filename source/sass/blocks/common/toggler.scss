@@ -6,6 +6,8 @@
   height: 17px;
   transition: all $default-transition-settings;
   outline: none;
+  display: none;
+  z-index: 11;
 
   &::before {
     @include pseudo;
@@ -13,7 +15,7 @@
     top: -6px;
     left: -6px;
     width: 30px;
-    height: 29px;
+    height: 31px;
     border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
     opacity: 0;
   }
@@ -77,5 +79,9 @@
         transform: rotate3d(0, 0, 1, -45deg);
       }
     }
+  }
+
+  @include tablet {
+    display: block;
   }
 }

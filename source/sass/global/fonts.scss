@@ -1,5 +1,10 @@
 $fonts: (
-  ("", "Arial", 400, normal),
+  ("Gilroy Bold", "gilroy-bold", 700, normal),
+  ("Gilroy Extrabold", "gilroy-extrabold", 800, normal),
+  ("Gilroy Medium", "gilroy-medium", 500, normal),
+  ("Lato Regular", "lato-regular", 400, normal),
+  ("Playfair Display Semibold", "playfair-display-semibold", 600, normal),
+  ("Playfair Display Bold", "playfair-display-bold", 700, normal),
 );
 
 @mixin font-face($family, $file-name, $weight, $style) {

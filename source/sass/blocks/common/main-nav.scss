@@ -2,41 +2,99 @@
   display: flex;
   position: relative;
   align-items: center;
-  margin-right: 24px;
 
   ul {
     @include list-reset;
 
     display: flex;
-    position: absolute;
-    left: 50px;
-    top: 2px;
-    min-width: 300px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform $default-transition-settings, opacity 0.7s ease-in;
-    opacity: 0;
+
+    @include tablet {
+      position: absolute;
+      left: 50px;
+      top: -3px;
+      min-width: 250px;
+      transform: translateX(-200px);
+      transform-origin: left;
+      transition: transform $default-transition-settings, opacity 0.3s ease-in;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    @include mobile {
+      top: 0px;
+      left: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      min-width: auto;
+      background-color: $color-black-pearl;
+      transform: none;
+      z-index: 10;
+    }
   }
 
   li {
-    margin-right: 10px;
+    margin-right: 40px;
     flex-shrink: 0;
 
     &:last-child {
       margin-right: 0;
     }
+
+    @include tablet {
+      margin-right: 25px;
+    }
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   a {
-    font-size: rem(14);
+    font-size: rem(18);
     text-decoration: none;
-    transition: opacity $default-transition-settings;
+    transition: opacity $default-transition-settings, color $default-transition-settings;
+
+    &:hover {
+      color: $color-golden-glow;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    @include tablet {
+      font-size: rem(14);
+    }
+
+    @include mobile {
+      font-size: rem(30);
+    }
   }
 
   &--expanded {
     ul {
-      transform: scaleX(1);
-      opacity: 1;
+      @include tablet {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: all;
+      }
     }
+  }
+
+  @include tablet {
+    order: -1;
+  }
+
+  @include mobile {
+    position: initial;
   }
 }

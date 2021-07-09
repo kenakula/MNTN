@@ -2,24 +2,48 @@ extends ../base/layout.pug
 
 block data
   include ../data/main-nav.data.pug
+  include ../data/stages.data.pug
 
 block variables
   -
-    const title = "ProjectName — Главная";
+    const title = "MNTN — Main";
     const hasHeader = true;
     const hasFooter = true;
     const currentPage = "main"; //- для остальных страниц пишем либо пустую строку, либо индекс
 
 block append head
   //- используйте только для шрифта находящегося на первом экране
-  link(rel="preload", href="fonts/placeholder.woff2", as="font", crossorigin="anonymous")
+  link(rel="preload", href="fonts/gilroy-bold.woff2", as="font", crossorigin="anonymous")
+  link(rel="preload", href="fonts/lato-regular.woff2", as="font", crossorigin="anonymous")
 
 block nav
   +main-nav(mainNav)
 
 block main
   main
-    .container
+    .bg.bg--clouds.js-clouds
+    .bg.bg--top-gradient
+    .bg.bg--mnts.js-mnts
+    .bg.bg--hill.js-hill
+    .promo
+      .promo__wrapper.container
+        //- +socials().promo__socials
+        //- +pagination().promo__pagination
+        .promo__inner
+          p.title.title--yellow A Hiking guide
+          p.promo__title Be prepared for the Mountains and beyond!
+          button.promo__button.btn-reset.js-scroll-btn
+            span Scroll down
+            +icon("icon-arrow-down", 16, 24)
+
+    .stages#stages
+      .stages__wrapper.container
+        ul.stages__list
+          each item in stagesList
+            +card(item).stages__item
+
+
+
 
 block modals
   +modal("modal--feedback")

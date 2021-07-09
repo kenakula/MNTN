@@ -1,6 +1,140 @@
 .footer {
-  min-height: 100px;
-  padding: 0 60px;
+  padding-bottom: 120px;
+  padding-top: 120px;
 
-  background-color: $color-blue;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 75%;
+
+    @include container {
+      max-width: 85%;
+    }
+
+    @include tablet {
+      max-width: 100% !important;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+
+    @include mobile {
+      margin-bottom: 40px;
+      max-width: none;
+    }
+
+    @media (max-width: 450px) {
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    @include font(18, 32);
+
+    @media (max-width: 450px) {
+      text-align: center;
+    }
+  }
+
+  &__copyrights {
+    @include font(18, 32);
+
+    margin-top: auto;
+    font-family: $font-lato-regular;
+    opacity: 0.5;
+
+    @media (max-width: 450px) {
+      text-align: center;
+    }
+  }
+
+  &__map {
+    display: flex;
+    justify-content: space-between;
+    width: 38.7%;
+
+    @include desktop {
+      width: 50%;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+    @media (max-width: 450px) {
+      flex-direction: column;
+
+      .footer__col {
+        margin-right: 0;
+        margin-bottom: 40px;
+        text-align: center;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__col {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__col-title {
+    @include font(24, 32);
+
+    margin: 0;
+    margin-bottom: 24px;
+    color: $color-golden-glow;
+  }
+
+  &__list {
+    @include list-reset;
+
+    li {
+      @include font(18, 32);
+
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        color: $color-white;
+        font-family: $font-gilroy-medium;
+        font-weight: 400;
+        transition: color $default-transition-settings, opacity $default-transition-settings;
+
+        &:hover {
+          color: $color-golden-glow;
+        }
+
+        &:active {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    padding-bottom: 50px;
+    padding-top: 50px;
+  }
 }

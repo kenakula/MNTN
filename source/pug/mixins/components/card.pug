@@ -1,0 +1,12 @@
+mixin card(item)
+  li.card&attributes(attributes)
+    .card__info
+      span.card__index !{item.index}
+      h3.card__subtitle.title.title--yellow !{item.subtitle}
+      p.card__title !{item.title}
+      p.card__text !{item.text}
+      a.card__link(href=item.link)
+        span read more
+        +icon("icon-arrow-down", 16, 24)
+    .card__img
+      +img(item.image)
