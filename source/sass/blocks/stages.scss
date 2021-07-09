@@ -1,5 +1,10 @@
 .stages {
+  position: relative;
+  z-index: $layer-2;
   margin-bottom: 100px;
+  padding-top: 100px;
+  background-color: $color-black-pearl;
+  box-shadow: 0 -40px 40px $color-black-pearl;
 
   &__wrapper {
     max-width: 75%;

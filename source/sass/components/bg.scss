@@ -23,13 +23,13 @@
     @include make-adaptive-bg("../img/bg/bg-mnts", "png");
 
     top: 470px;
-    height: 1350px;
+    height: 1160px;
   }
 
   &--hill {
     @include make-adaptive-bg("../img/bg/bg-hill", "png");
 
-    top: 900px;
+    top: 725px;
     height: 926px;
 
     &::before {

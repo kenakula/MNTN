@@ -3,6 +3,8 @@ import { iosVhFix } from './utils/ios-vh-fix';
 
 import { initModals } from './modules/init-modals';
 import { menuToggler, onMenuTogglerToggleClass } from './modules/toggler';
+import {parallax} from './modules/parallax';
+import {pageScroll} from './modules/page-scroll';
 
 // Utils
 // ---------------------------------
@@ -17,3 +19,5 @@ initModals();
 if (menuToggler) {
   menuToggler.addEventListener('click', onMenuTogglerToggleClass);
 }
+parallax();
+pageScroll();

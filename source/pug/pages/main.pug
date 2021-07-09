@@ -21,10 +21,10 @@ block nav
 
 block main
   main
-    .bg.bg--clouds
+    .bg.bg--clouds.js-clouds
     .bg.bg--top-gradient
-    .bg.bg--mnts
-    .bg.bg--hill
+    .bg.bg--mnts.js-mnts
+    .bg.bg--hill.js-hill
     .promo
       .promo__wrapper.container
         //- +socials().promo__socials
@@ -32,11 +32,11 @@ block main
         .promo__inner
           p.title.title--yellow A Hiking guide
           p.promo__title Be prepared for the Mountains and beyond!
-          button.promo__button.btn-reset
+          button.promo__button.btn-reset.js-scroll-btn
             span Scroll down
             +icon("icon-arrow-down", 16, 24)
 
-    .stages
+    .stages#stages
       .stages__wrapper.container
         ul.stages__list
           each item in stagesList
