@@ -2,7 +2,7 @@ const pageScroll = () => {
   const scrollBtns = document.querySelectorAll('.js-scroll-btn');
   const paginationContainer = document.querySelector('.js-pagination-pages');
   const observerTargets = document.querySelectorAll('[data-target]');
-  const paginationTrack = document.querySelector('.js-track');
+  // const paginationTrack = document.querySelector('.js-track');
   const paginationThumb = document.querySelector('.js-thumb');
 
   const observerOptions = {
@@ -51,11 +51,14 @@ const pageScroll = () => {
     const btn = evt.target.closest('.js-scroll-btn');
     const targetId = btn.dataset.page;
     const targetEl = document.querySelector(`[data-target="${targetId}"]`);
+    let blockPosition = window.matchMedia('(max-width: 768px)').matches
+      ? 'start'
+      : 'center';
 
     if (targetEl) {
       targetEl.scrollIntoView({
         behavior: 'smooth',
-        block: 'center',
+        block: blockPosition,
       });
       if (btn.classList.contains('js-pagination')) {
         switchBtnClass(btn);

@@ -1187,7 +1187,7 @@ svg {
   padding-left: 32px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: 30; }
+  z-index: 40; }
   .socials span {
     font-size: 1.125rem;
     line-height: 1.5625rem;
@@ -1397,10 +1397,29 @@ svg {
       .modal--fit-content .modal__content {
         width: 100%; }
       .promo__title {
-        font-size: 3.4375rem;
-        line-height: 4.6875rem; }
+        font-size: 2.5rem;
+        line-height: 3.75rem;
+        margin: 0 auto 40px;
+        max-width: 340px;
+        text-align: center; }
+      .promo__button {
+        margin: 0 auto; }
+    .promo {
+      margin-bottom: 120px;
+      padding-top: 80px; }
     .stages {
       margin-bottom: 50px; }
+      .bg--clouds {
+        height: 500px;
+        top: 0; }
+      .bg--top-gradient {
+        height: 400px; }
+      .bg--mnts {
+        top: 200px;
+        height: 450px; }
+      .bg--hill {
+        top: 356px;
+        height: 300px; }
     .card {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -1421,6 +1440,8 @@ svg {
         max-width: 70%; }
       .card__info {
         padding: 20px 60px; }
+    .socials {
+      top: 120px; }
       .title--yellow {
         font-size: 1rem;
         line-height: 1.5rem; } }

@@ -11,12 +11,21 @@
 
     top: -215px;
     height: 1513px;
+
+    @include mobile {
+      height: 500px;
+      top: 0;
+    }
   }
 
   &--top-gradient {
     height: 800px;
     background-image: linear-gradient(180deg, rgba($color: $color-black-pearl, $alpha: 0.8) 0%, rgba($color: $color-black-pearl, $alpha: 0.5) 55%, rgba($color: $color-black-pearl, $alpha: 0.0) 100%);
     z-index: $layer-2;
+
+    @include mobile {
+      height: 400px;
+    }
   }
 
   &--mnts {
@@ -24,6 +33,11 @@
 
     top: 470px;
     height: 1160px;
+
+    @include mobile {
+      top: 200px;
+      height: 450px;
+    }
   }
 
   &--hill {
@@ -40,6 +54,11 @@
       width: 100%;
       height: 300px;
       background: linear-gradient(0deg, $color-black-pearl, $color-transparent);
+    }
+
+    @include mobile {
+      top: 356px;
+      height: 300px;
     }
   }
 }
