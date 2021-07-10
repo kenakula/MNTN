@@ -1,6 +1,6 @@
 .pagination {
   position: fixed;
-  z-index: $layer-3;
+  z-index: $layer-4;
   top: 50vh;
   right: 5%;
   display: flex;
@@ -29,6 +29,11 @@
     &:hover {
       color: $color-golden-glow;
     }
+
+    &.active {
+      pointer-events: none;
+      color: $color-golden-glow;
+    }
   }
 
   &__track {
@@ -44,6 +49,7 @@
     height: 60px;
     border-radius: 5px;
     background-color: $color-white;
+    transition: transform $default-transition-settings;
   }
 
   @include container {

@@ -34,11 +34,23 @@
   }
 
   &__button {
+    position: relative;
     display: flex;
     align-items: center;
     font-size: rem(18);
     color: $color-white;
     transition: color $default-transition-settings;
+    outline: none;
+
+    &::before {
+      @include pseudo;
+
+      position: absolute;
+      left: -20px;
+      right: -20px;
+      top: -20px;
+      bottom: -20px;
+    }
 
     span {
       margin-right: 10px;

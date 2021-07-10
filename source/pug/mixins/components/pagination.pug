@@ -3,10 +3,12 @@
 
 mixin pagination
   .pagination&attributes(attributes)
-    .pagination__pages
+    .pagination__pages.js-pagination-pages
       ul
-        each item in pagination
+        each item, index in pagination
+          - let pageIndex = `0${index + 1}`;
+          - let activeClass = index === 0 ? 'active' : '';
           li
-            button.pagination__button(type="button", data-page=item) !{item}
-    .pagination__track
-      .pagination__thumb
+            button.pagination__button.js-scroll-btn.js-pagination(class=activeClass, type="button", data-page=item, data-index=index) !{item}
+    .pagination__track.js-track
+      .pagination__thumb.js-thumb

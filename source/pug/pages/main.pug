@@ -25,22 +25,23 @@ block main
     .bg.bg--top-gradient
     .bg.bg--mnts.js-mnts
     .bg.bg--hill.js-hill
-    .promo
+    .promo(data-target="Start")
       .promo__wrapper.container
         //- +socials().promo__socials
         //- +pagination().promo__pagination
         .promo__inner
           p.title.title--yellow A Hiking guide
           p.promo__title Be prepared for the Mountains and beyond!
-          button.promo__button.btn-reset.js-scroll-btn
+          button.promo__button.btn-reset.js-scroll-btn(data-page="01")
             span Scroll down
             +icon("icon-arrow-down", 16, 24)
 
     .stages#stages
       .stages__wrapper.container
         ul.stages__list
-          each item in stagesList
-            +card(item).stages__item
+          each item, index in stagesList
+            - const stageIndex = `0${index + 1}`;
+            +card(item).stages__item(data-target=stageIndex)
 
 
 
