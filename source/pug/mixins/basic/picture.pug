@@ -1,10 +1,11 @@
 mixin picture(props)
-  - const {path, imgType, altText, width, height} = props;
+  - const {path, image, format, width, height, altText} = props;
 
   picture
-    source(type='image/webp', srcset=`${path}@1x.webp 1x, ${path}@2x.webp 2x`)
-    img(src=`${path}@1x.${imgType}`,
-      srcset=`${path}@2x.${imgType} 2x`,
-      alt=altText,
-      width= width ? width : null,
-      height= height ? height : null)&attributes(attributes)
+    source(type='image/webp', srcset=`img/${path}/${image}.webp 1x, img/${path}/${image}@2x.webp 2x`)
+    img(src= `img/${path}/${image}.${format}`,
+    srcset= `img/${path}/${image}@2x.${format} 2x`,
+    width= width,
+    height= height,
+    alt= altText,
+    loading="lazy")

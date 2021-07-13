@@ -13,8 +13,8 @@ block variables
 
 block append head
   //- используйте только для шрифта находящегося на первом экране
-  link(rel="preload", href="fonts/gilroy-bold.woff2", as="font", crossorigin="anonymous")
-  link(rel="preload", href="fonts/lato-regular.woff2", as="font", crossorigin="anonymous")
+  //- link(rel="preload", href="fonts/gilroy-bold.woff2", as="font", crossorigin="anonymous")
+  //- link(rel="preload", href="fonts/lato-regular.woff2", as="font", crossorigin="anonymous")
 
 block nav
   +main-nav(mainNav)
@@ -30,7 +30,7 @@ block main
         //- +socials().promo__socials
         //- +pagination().promo__pagination
         .promo__inner
-          p.title.title--yellow A Hiking guide
+          h1.title.title--yellow A Hiking guide
           p.promo__title Be prepared for the Mountains and beyond!
           button.promo__button.btn-reset.js-scroll-btn(data-page="01")
             span Scroll down
@@ -38,6 +38,7 @@ block main
 
     .stages#stages
       .stages__wrapper.container
+        h2.visually-hidden Stages of hiking
         ul.stages__list
           each item, index in stagesList
             - const stageIndex = `0${index + 1}`;
