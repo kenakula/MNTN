@@ -17,11 +17,11 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description">
+    <meta name="description" content="hiking site">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/gilroy-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/lato-regular.woff2" as="font" crossorigin="anonymous">
   </head>
-  <link rel="preload" href="fonts/gilroy-bold.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/lato-regular.woff2" as="font" crossorigin="anonymous">
   <body>
     <noscript>У вас отключен JavaScript. Это пугает.</noscript>
     <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-account"><path clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78A7.893 7.893 0 0112 20c-1.86 0-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33A7.95 7.95 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/><mask id="a" maskUnits="userSpaceOnUse" x="2" y="2" width="20" height="20"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7.07 18.28c.43-.9 3.05-1.78 4.93-1.78s4.51.88 4.93 1.78A7.893 7.893 0 0112 20c-1.86 0-3.57-.64-4.93-1.72zm11.29-1.45c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33A7.95 7.95 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6zm0 5c-.83 0-1.5-.67-1.5-1.5S11.17 8 12 8s1.5.67 1.5 1.5S12.83 11 12 11z"/></mask></symbol><symbol id="icon-arrow-down"><path d="M16 16l-1.41-1.41L9 20.17V0H7v20.17l-5.58-5.59L0 16l8 8 8-8z"/></symbol><symbol id="icon-close"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="icon-insta"><path d="M5.8 0h8.4A5.8 5.8 0 0120 5.8v8.4a5.8 5.8 0 01-5.8 5.8H5.8A5.8 5.8 0 010 14.2V5.8A5.8 5.8 0 015.8 0zm-.2 2A3.6 3.6 0 002 5.6v8.8A3.6 3.6 0 005.6 18h8.8a3.6 3.6 0 003.6-3.6V5.6A3.6 3.6 0 0014.4 2H5.6zm9.65 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM10 5a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></symbol><symbol id="icon-twitter"><path d="M21.46 2.012a8.58 8.58 0 01-2.466.676A4.305 4.305 0 0020.881.314a8.591 8.591 0 01-2.725 1.041 4.292 4.292 0 00-7.313 3.914A12.184 12.184 0 011.997.787a4.271 4.271 0 00-.581 2.157 4.29 4.29 0 001.91 3.572 4.276 4.276 0 01-1.945-.537v.054c0 2.08 1.48 3.814 3.443 4.209a4.296 4.296 0 01-1.939.073 4.296 4.296 0 004.01 2.98 8.61 8.61 0 01-5.33 1.838c-.347 0-.688-.02-1.024-.06A12.147 12.147 0 007.12 17c7.893 0 12.21-6.54 12.21-12.21 0-.187-.004-.372-.012-.556a8.719 8.719 0 002.141-2.222z"/></symbol></svg></div>
@@ -88,7 +88,7 @@
           <div class="promo" data-target="Start">
             <div class="promo__wrapper container">
               <div class="promo__inner">
-                <p class="title title--yellow">A Hiking guide</p>
+                <h1 class="title title--yellow">A Hiking guide</h1>
                 <p class="promo__title">Be prepared for the Mountains and beyond!</p>
                 <button class="promo__button btn-reset js-scroll-btn" data-page="01"><span>Scroll down</span>
                   <svg width="16" height="24" aria-hidden="true">
@@ -100,6 +100,7 @@
           </div>
           <div class="stages" id="stages">
             <div class="stages__wrapper container">
+              <h2 class="visually-hidden">Stages of hiking</h2>
               <ul class="stages__list">
                 <li class="card stages__item" data-target="01">
                   <div class="card__info"><span class="card__index">01</span>
@@ -110,7 +111,10 @@
                         <use xlink:href="#icon-arrow-down"></use>
                       </svg></a>
                   </div>
-                  <div class="card__img"><img src="img/content/stages-img-1.jpg" srcset="img/content/stages-img-1@2x.jpg 2x" width="566" height="720"/>
+                  <div class="card__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/stages-img-1.webp 1x, img/content/stages-img-1@2x.webp 2x"/><img src="img/content/stages-img-1.jpg" srcset="img/content/stages-img-1@2x.jpg 2x" width="566" height="720" alt="hiking image" loading="lazy"/>
+                    </picture>
                   </div>
                 </li>
                 <li class="card stages__item" data-target="02">
@@ -122,7 +126,10 @@
                         <use xlink:href="#icon-arrow-down"></use>
                       </svg></a>
                   </div>
-                  <div class="card__img"><img src="img/content/stages-img-2.jpg" srcset="img/content/stages-img-2@2x.jpg 2x" width="566" height="720"/>
+                  <div class="card__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/stages-img-2.webp 1x, img/content/stages-img-2@2x.webp 2x"/><img src="img/content/stages-img-2.jpg" srcset="img/content/stages-img-2@2x.jpg 2x" width="566" height="720" alt="hiking image" loading="lazy"/>
+                    </picture>
                   </div>
                 </li>
                 <li class="card stages__item" data-target="03">
@@ -134,7 +141,10 @@
                         <use xlink:href="#icon-arrow-down"></use>
                       </svg></a>
                   </div>
-                  <div class="card__img"><img src="img/content/stages-img-3.jpg" srcset="img/content/stages-img-3@2x.jpg 2x" width="566" height="720"/>
+                  <div class="card__img">
+                    <picture>
+                      <source type="image/webp" srcset="img/content/stages-img-3.webp 1x, img/content/stages-img-3@2x.webp 2x"/><img src="img/content/stages-img-3.jpg" srcset="img/content/stages-img-3@2x.jpg 2x" width="566" height="720" alt="hiking image" loading="lazy"/>
+                    </picture>
                   </div>
                 </li>
               </ul>
